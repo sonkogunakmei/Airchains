@@ -34,11 +34,13 @@ echo "export AIRCHAIN_PORT="19"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 ```
 
-# download binary
+**download binary**
+```
 cd $HOME
 wget -O junctiond https://github.com/airchains-network/junction/releases/download/v0.2.0/junctiond-linux-amd64
 chmod +x junctiond
 mv junctiond $HOME/go/bin/
+```
 
 # config and init app
 junctiond init $MONIKER --chain-id $AIRCHAIN_CHAIN_ID 
