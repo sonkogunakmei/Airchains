@@ -42,9 +42,11 @@ chmod +x junctiond
 mv junctiond $HOME/go/bin/
 ```
 
-# config and init app
+**config and init app**
+```
 junctiond init $MONIKER --chain-id $AIRCHAIN_CHAIN_ID 
 sed -i -e "s|^node *=.*|node = \"tcp://localhost:${AIRCHAIN_PORT}657\"|" $HOME/.junction/config/client.toml
+```
 
 # download genesis and addrbook
 wget -O $HOME/.junction/config/genesis.json https://server-4.itrocket.net/testnet/airchains/genesis.json
