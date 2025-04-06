@@ -96,7 +96,8 @@ sed -i 's|minimum-gas-prices =.*|minimum-gas-prices = "0.001amf"|g' $HOME/.junct
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.junction/config/config.toml
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.junction/config/config.toml
 ```
-# create service file
+**create service file**
+```
 sudo tee /etc/systemd/system/junctiond.service > /dev/null <<EOF
 [Unit]
 Description=Airchains node
@@ -111,6 +112,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 # reset and download snapshot
 junctiond tendermint unsafe-reset-all --home $HOME/.junction
