@@ -124,7 +124,8 @@ if curl -s --head curl https://server-4.itrocket.net/testnet/airchains/airchains
 fi
 ```
 
-# enable and start service
+**enable and start service**
+```
 sudo systemctl daemon-reload
 sudo systemctl enable junctiond
 sudo systemctl restart junctiond && sudo journalctl -u junctiond -fo cat
@@ -132,6 +133,8 @@ Automatic Installation
 pruning: custom: 100/0/19 | indexer: null
 
 source <(curl -s https://itrocket.net/api/testnet/airchains/autoinstall/)
+```
+
 Create wallet
 # to create a new wallet, use the following command. don’t forget to save the mnemonic
 junctiond keys add $WALLET
