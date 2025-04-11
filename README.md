@@ -140,8 +140,11 @@ Create wallet
 ```
 junctiond keys add $WALLET
 ```
-# to restore exexuting wallet, use the following command
+
+**to restore exexuting wallet, use the following command**
+``
 junctiond keys add $WALLET --recover
+```
 
 # save wallet and validator address
 WALLET_ADDRESS=$(junctiond keys show $WALLET -a)
