@@ -203,12 +203,14 @@ echo "{\"pubkey\":{\"@type\":\"/cosmos.crypto.ed25519.PubKey\",\"key\":\"$(junct
 }" > validator.json
 ```
 
-# Create a validator using the JSON configuration
+**Create a validator using the JSON configuration**
+```
 junctiond tx staking create-validator validator.json \
     --from $WALLET \
     --chain-id junction \
 	--fees 200amf
-	
+```
+
 Monitoring
 If you want to have set up a monitoring and alert system use our cosmos nodes monitoring guide with tenderduty
 
