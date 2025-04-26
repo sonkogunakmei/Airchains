@@ -238,10 +238,13 @@ sudo ufw allow ${AIRCHAIN_PORT}656/tcp
 sudo ufw enable
 ```
 
-Delete node
+**Delete node**
+```
 sudo systemctl stop junctiond
 sudo systemctl disable junctiond
 sudo rm -rf /etc/systemd/system/junctiond.service
 sudo rm $(which junctiond)
 sudo rm -rf $HOME/.junction
 sed -i "/AIRCHAIN_/d" $HOME/.bash_profile
+```
+
